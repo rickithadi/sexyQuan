@@ -1,24 +1,38 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
-import { AppComponent }  from './app.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {
+  MatButtonModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatOptionModule,
+  MatSelectModule,
+} from '@angular/material';
+import {AppComponent} from './app.component';
+import {HeroFormComponent} from './hero-form/hero-form.component';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    MatGridListModule,
+    FormsModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatCardModule,
+    BrowserAnimationsModule,
   ],
-  declarations: [
-    AppComponent,
-    HeroFormComponent
-  ],
+  declarations: [AppComponent, HeroFormComponent],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
 
 /*
 Copyright Google LLC. All Rights Reserved.
