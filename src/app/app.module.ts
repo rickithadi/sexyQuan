@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgxEditorModule} from 'ngx-editor';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {WordFactoryService} from './word-factory.service';
 
 import {MatRadioModule} from '@angular/material/radio';
 

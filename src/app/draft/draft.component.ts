@@ -1,5 +1,6 @@
 import {Input, Component, OnInit} from '@angular/core';
 import {AngularEditorConfig} from '@kolkov/angular-editor';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {WordFactoryService} from '../word-factory.service';
 import {Hero} from '../hero';
 import {Service} from '../service';
@@ -13,19 +14,11 @@ export class DraftComponent implements OnInit {
   @Input() appraisal: Service;
   draft: any = 'penis';
 
-  editorConfig: AngularEditorConfig = {
-    editable: true,
-    spellcheck: true,
-    height: '250px',
-    minHeight: '20px',
-    placeholder: 'Enter text here...',
-    translate: 'no',
-  };
-  // let key='AF5B9M2X'
-	constructor(){
-	}
+ // let key='AF5B9M2X'
 
+  // constructor(private http: HttpClient) {}
   ngOnInit() {
     console.log(this.hero);
+    // this.word.check('anus');
   }
 }
