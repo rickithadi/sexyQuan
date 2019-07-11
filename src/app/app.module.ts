@@ -1,6 +1,8 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {NgxEditorModule} from 'ngx-editor';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import {MatRadioModule} from '@angular/material/radio';
 
@@ -18,22 +20,27 @@ import {AppComponent} from './app.component';
 import {HeroFormComponent} from './hero-form/hero-form.component';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DraftComponent} from './draft/draft.component';
+import {AngularEditorModule} from '@kolkov/angular-editor';
 
 @NgModule({
   imports: [
     BrowserModule,
     MatGridListModule,
+    AngularEditorModule,
     MatRadioModule,
+    HttpClientModule,
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
     MatCheckboxModule,
     MatSelectModule,
+    NgxEditorModule,
     MatOptionModule,
     MatCardModule,
     BrowserAnimationsModule,
   ],
-  declarations: [AppComponent, HeroFormComponent],
+  declarations: [AppComponent, HeroFormComponent, DraftComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

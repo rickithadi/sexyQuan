@@ -7,7 +7,7 @@
     <div class="container">
       <h1>Basic Info</h1>
       <form #heroForm="ngForm">
-        {{diagnostic}}
+        <!-- {{diagnostic}} -->
         <p>
           <mat-form-field>
             <input
@@ -50,19 +50,18 @@
               name="name"
             />
           </mat-form-field>
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="length of service"
-            type="text"
-            id="length"
-            [(ngModel)]="model.length"
-            name="length"
-          />
-        </mat-form-field>
-    </p>
-<div class="col-md-4">
-
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="length of service"
+              type="text"
+              id="length"
+              [(ngModel)]="model.length"
+              name="length"
+            />
+          </mat-form-field>
+        </p>
+        <div class="col-md-4">
           <mat-form-field appearance="outline">
             <textarea
               matInput
@@ -71,12 +70,11 @@
               id="accreditation"
               [(ngModel)]="model.accreditation"
               name="accreditation"
-	      ></textarea>
+            ></textarea>
           </mat-form-field>
-</div>
-<div class="col-md-4">
-
-     <mat-form-field appearance="outline">
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="outline">
             <textarea
               matInput
               placeholder="milestone"
@@ -84,9 +82,9 @@
               id="milestone"
               [(ngModel)]="model.milestone"
               name="milestone"
-	      ></textarea>
+            ></textarea>
           </mat-form-field>
-</div>
+        </div>
       </form>
     </div>
   </mat-card>
@@ -98,29 +96,32 @@
   <mat-card>
     <div class="container">
       <h1>Appraisal</h1>
-        <!-- {{diagnosticA}} -->
-        <span style="color:grey"> Performance: </span>
+      <!-- {{diagnosticA}} -->
+      <span style="color:grey"> Performance: </span>
       <p>
         <mat-radio-group [(ngModel)]="appraisal.performance">
-          <mat-radio-button value="auto">Auto</mat-radio-button>
-          <mat-radio-button value="always">Always</mat-radio-button>
-          <mat-radio-button value="never">Never</mat-radio-button>
+          <mat-radio-button value="1">1</mat-radio-button>
+          <mat-radio-button value="2">2</mat-radio-button>
+          <mat-radio-button value="3">3</mat-radio-button>
+          <mat-radio-button value="4">4</mat-radio-button>
+          <mat-radio-button value="5">5</mat-radio-button>
         </mat-radio-group>
       </p>
-        <span style="color:grey"> Conduct: </span>
+      <span style="color:grey"> Conduct: </span>
       <p>
         <mat-radio-group [(ngModel)]="appraisal.conduct">
-          <mat-radio-button value="auto">Auto</mat-radio-button>
-          <mat-radio-button value="always">Always</mat-radio-button>
-          <mat-radio-button value="never">Never</mat-radio-button>
+          <mat-radio-button value="1">1</mat-radio-button>
+          <mat-radio-button value="2">2</mat-radio-button>
+          <mat-radio-button value="3">3</mat-radio-button>
+          <mat-radio-button value="4">4</mat-radio-button>
+          <mat-radio-button value="5">5</mat-radio-button>
         </mat-radio-group>
       </p>
     </div>
   </mat-card>
 </div>
-<!-- </mat&#45;grid&#45;tile> -->
-<!-- </mat&#45;grid&#45;list> -->
+<br />
+<div class="col-md-10">
+<app-draft [hero]="model" [appraisal]="appraisal"></app-draft>
+</div>
 
-<!-- </mat&#45;grid&#45;tile> -->
-<!-- </mat&#45;grid&#45;list> -->
-<!-- </div> -->
