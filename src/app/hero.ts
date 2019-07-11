@@ -3,15 +3,13 @@ export class Hero {
   constructor(
     // public id: number,
     public nric: string,
+    public rank: string,
     public name: string,
     public length: string,
-    // public accreditation?: string,
-    // public milestone?: string,
-    public rank: string,
+    public vocation?: string,
+    public accreditation?: string,
+    public milestone?: string,
     // public appointment: string,
-    public comd: boolean,
-    // public power: string,
-    public vocation?: string
   ) {  }
 
 }

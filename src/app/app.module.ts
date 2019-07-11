@@ -2,11 +2,14 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 
+import {MatRadioModule} from '@angular/material/radio';
+
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {
   MatButtonModule,
   MatInputModule,
+  MatFormFieldModule,
   MatCheckboxModule,
   MatOptionModule,
   MatSelectModule,
@@ -20,6 +23,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     MatGridListModule,
+    MatRadioModule,
+    MatFormFieldModule,
     FormsModule,
     MatInputModule,
     MatCheckboxModule,
