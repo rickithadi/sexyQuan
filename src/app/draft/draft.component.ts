@@ -22,10 +22,7 @@ export class DraftComponent implements OnInit {
     translate: 'no',
   };
   // let key='AF5B9M2X'
-	constructo(){
-this.draft=''
-this.appraisal=appraisal
-this.hero=hero
+	constructor(){
 	}
 
   ngOnInit() {
